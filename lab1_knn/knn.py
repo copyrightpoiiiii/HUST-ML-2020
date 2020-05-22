@@ -211,7 +211,7 @@ def run():
             else :
                 wrongNum += 1
         f.close()
-        acuList.append((float(rightNum)/(rightNum+wrongNum),i))
+        acuList.append((100.0*rightNum/(rightNum+wrongNum),i))
     f = open ('result.txt','wt')
     print(acuList,file = f)
     f.close()
