@@ -174,7 +174,7 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
         rankList.append((sum,i))
     rankList.sort(key = lambda x:x[0])
     cnt = []
-    print('对于第%d幅图片:' % testVec)
+    print('对于第%d幅图片:' % testVec,file = f)
     for i in range(5):
         print('第%i相似的图像为:' % i,file = f)
         for j in range(trainData[rankList[i][1]].shape[0]):
@@ -183,7 +183,6 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
     pos = 0
     for i in range(10,1000,10):
         for j in range(10):
-            print(pos*10+j)
             cnt.append(trainLabel[rankList[pos*10+j][1]])
         label = max(cnt, key=cnt.count)
         filename = 'k='+str(i)+'.txt'
