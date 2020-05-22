@@ -161,6 +161,8 @@ def knn(testVec,trainData,trainLabel,k,f,trainNum,testNum):
     print(trainSize)
     print(trainData[0].shape[0])
     for i in range(trainSize):
+        if (i + 1) % 10000 == 0:
+            print('已解析 %d' % (i + 1) + '张')
         sum = 0
         for j in range(trainData[i].shape[0]):
             testR = int(testNum[j])
