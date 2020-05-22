@@ -12,12 +12,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab1_knn/knn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="162" column="17" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
+            <state relative-caret-position="432">
+              <caret line="230" column="23" selection-start-line="230" selection-start-column="23" selection-end-line="230" selection-end-column="23" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -171,7 +171,11 @@
       <workItem from="1590073444489" duration="3835000" />
       <workItem from="1590078611806" duration="4259000" />
       <workItem from="1590117034083" duration="4834000" />
-      <workItem from="1590125029305" duration="83000" />
+      <workItem from="1590125029305" duration="592000" />
+      <workItem from="1590128365355" duration="8000" />
+      <workItem from="1590128484108" duration="215000" />
+      <workItem from="1590142488866" duration="172000" />
+      <workItem from="1590142665928" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="lab 1">
       <created>1590077322112</created>
@@ -250,17 +254,24 @@
       <option name="project" value="LOCAL" />
       <updated>1590123836075</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="lab 1 finish">
+      <created>1590125125951</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1590125125952</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26450000" />
+    <option name="totallyTimeSpent" value="27390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.38340485" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19670959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -271,7 +282,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.13636364" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.3014354" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32894737" />
@@ -343,10 +354,15 @@
     <entry file="file://$PROJECT_DIR$/lab1_knn/result.txt" />
     <entry file="file://$PROJECT_DIR$/lab1_knn/k=10.txt" />
     <entry file="file://$PROJECT_DIR$/lab1_knn/knnOutput.txt" />
+    <entry file="file://$PROJECT_DIR$/lab1_knn/output/knnOutput.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3128" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lab1_knn/knn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="162" column="17" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
+        <state relative-caret-position="432">
+          <caret line="230" column="23" selection-start-line="230" selection-start-column="23" selection-end-line="230" selection-end-column="23" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

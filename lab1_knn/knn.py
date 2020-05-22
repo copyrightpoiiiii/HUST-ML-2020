@@ -223,7 +223,7 @@ def run():
         plt.show()
     """
     result=np.zeros([200, 3])
-    for j in range(test_images.shape[0]):
+    for j in range(4974,test_images.shape[0]):
         print('开始处理第%d个图像:' % j)
         knn(j, train_images, train_labels,trainNum,testNum[j],test_labels[j],result)
     f = open ('output/result.txt','wt')
