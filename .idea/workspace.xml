@@ -12,12 +12,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab1_knn/knn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="230" column="32" lean-forward="true" selection-start-line="230" selection-start-column="32" selection-end-line="230" selection-end-column="32" />
+            <state relative-caret-position="145">
+              <caret line="162" column="17" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -26,6 +26,12 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>open</find>
+      <find>print</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,7 +53,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -64,6 +69,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -164,7 +170,8 @@
       <workItem from="1589980753569" duration="13183000" />
       <workItem from="1590073444489" duration="3835000" />
       <workItem from="1590078611806" duration="4259000" />
-      <workItem from="1590117034083" duration="4604000" />
+      <workItem from="1590117034083" duration="4834000" />
+      <workItem from="1590125029305" duration="83000" />
     </task>
     <task id="LOCAL-00001" summary="lab 1">
       <created>1590077322112</created>
@@ -229,11 +236,25 @@
       <option name="project" value="LOCAL" />
       <updated>1590123374970</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lab 1 finish">
+      <created>1590123723837</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1590123723837</updated>
+    </task>
+    <task id="LOCAL-00011" summary="lab 1 finish">
+      <created>1590123836075</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590123836075</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26137000" />
+    <option name="totallyTimeSpent" value="26450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -250,7 +271,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.3014354" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32894737" />
@@ -307,27 +328,11 @@
     <entry file="file://$PROJECT_DIR$/lab1_knn/data/t10k-labels.idx1-ubyte">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab1_knn/output1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1_knn/output3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9170" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1_knn/output0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1_knn/output2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-984" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1_knn/output4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17823" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1_knn/output1.txt" />
+    <entry file="file://$PROJECT_DIR$/lab1_knn/output3.txt" />
+    <entry file="file://$PROJECT_DIR$/lab1_knn/output0.txt" />
+    <entry file="file://$PROJECT_DIR$/lab1_knn/output2.txt" />
+    <entry file="file://$PROJECT_DIR$/lab1_knn/output4.txt" />
     <entry file="file://$USER_HOME$/Library/Python/3.7/lib/python/site-packages/numpy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -335,21 +340,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab1_knn/result.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1_knn/k=10.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-458" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1_knn/knnOutput.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1_knn/result.txt" />
+    <entry file="file://$PROJECT_DIR$/lab1_knn/k=10.txt" />
+    <entry file="file://$PROJECT_DIR$/lab1_knn/knnOutput.txt" />
     <entry file="file://$PROJECT_DIR$/lab1_knn/knn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="230" column="32" lean-forward="true" selection-start-line="230" selection-start-column="32" selection-end-line="230" selection-end-column="32" />
+        <state relative-caret-position="145">
+          <caret line="162" column="17" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

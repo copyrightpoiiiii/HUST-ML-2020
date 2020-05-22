@@ -161,11 +161,9 @@ def load_test_labels(idx_ubyte_file=test_labels_idx1_ubyte_file):
 def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
     trainSize = trainData.shape[0]
     rankList = []
-    print(trainSize)
-    print(trainData[0].shape[0])
     for i in range(trainSize):
-        if (i + 1) % 10000 == 0:
-            print('已解析 %d' % (i + 1) + '张')
+        #if (i + 1) % 10000 == 0:
+        #    print('已解析 %d' % (i + 1) + '张')
         sum = 0
         for j in range(trainData[i].shape[0]):
             testR = int(testNum[j])
@@ -179,7 +177,7 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
         print('第%i相似的图像为:' % i,file = f)
         for j in range(trainData[rankList[i][1]].shape[0]):
             print(strdel.sub('',str(trainData[rankList[i][1]][j])),file = f)
-    print('\n')
+    print('\n',file=f)
     pos = 0
     for i in range(10,500,10):
         for j in range(10):
@@ -188,7 +186,7 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
         filename = 'output/k='+str(i)+'.txt'
         outfile = open(filename,'a+')
         print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel), file=outfile)
-        print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel))
+        #print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel))
         if int(label) == int(rightLabel) :
             res[pos][0] +=1
         else :
