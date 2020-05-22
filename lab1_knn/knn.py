@@ -155,14 +155,16 @@ def load_test_labels(idx_ubyte_file=test_labels_idx1_ubyte_file):
     """
     return decode_idx1_ubyte(idx_ubyte_file)
 
-def knn(testVec,trainData,trainLabel,k,f):
+def knn(testVec,trainData,trainLabel,k,f,trainNum,testNum):
     trainSize = trainData.shape[0]
     rankList = []
+    print(trainSize)
+    print(trainData[0].shape[0])
     for i in range(trainSize):
         sum = 0
         for j in range(trainData[i].shape[0]):
-            testR = int(strdel.sub('',str(testVec[j])),2)
-            trainR = int(strdel.sub('',str(trainData[i][j])),2)
+            testR = int(testNum[j])
+            trainR = int(trainNum[i][j])
             sum += "{0:b}".format(testR^trainR).count('1')
         rankList.append((sum,i))
     rankList.sort(key = lambda x:x[0])
@@ -185,6 +187,17 @@ def run():
     test_images = load_test_images()
     test_labels = load_test_labels()
 
+    trainNum = np.empty((train_images.shape[0], train_images[0].shape[0], 1))
+    testNum = np.empty((test_images.shape[0], test_images[0].shape[0], 1))
+    for i in range(train_images.shape[0]) :
+        for j in range(train_images[i].shape[0]) :
+            trainNum[i][j] = int(strdel.sub('',str(train_images[i][j])),2)
+
+    for i in range(test_images.shape[0]) :
+        for j in range(test_images[i].shape[0]) :
+            testNum[i][j] = int(strdel.sub('',str(test_images[i][j])),2)
+
+
     print('开始运行')
 
     # 查看前十个数据及其标签以读取是否正确
@@ -196,7 +209,7 @@ def run():
         plt.show()
     """
     acuList = []
-    for i in range(5):
+    for i in range(1,100,5):
         filename = 'output'+str(i)+'.txt'
         f = open(filename,'wt')
         print('k=%d' % i,file = f)
@@ -204,13 +217,15 @@ def run():
         wrongNum = 0
         for j in range(test_images.shape[0]):
             print('开始处理第%d个图像:' % j)
-            label = knn(test_images[j], train_images, train_labels, i+1,f)
+            label = knn(test_images[j], train_images, train_labels, i+1,f,trainNum,testNum[j])
+            print('第%i幅图像的标签为:%d  正确标签为%d' % (j, label, test_labels[j]))
             print('第%i幅图像的标签为:%d  正确标签为%d' % (j, label, test_labels[j]),file = f)
             if int(label) == int(test_labels[i]):
                 rightNum += 1
             else :
                 wrongNum += 1
         f.close()
+        print(rightNum,wrongNum,(100.0*rightNum/(rightNum+wrongNum)))
         acuList.append((100.0*rightNum/(rightNum+wrongNum),i))
     f = open ('result.txt','wt')
     print(acuList,file = f)
