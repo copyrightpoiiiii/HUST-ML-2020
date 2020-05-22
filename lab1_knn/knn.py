@@ -15,6 +15,8 @@ test_labels_idx1_ubyte_file = 'data/t10k-labels.idx1-ubyte'
 
 strdel = re.compile(r'[\[\].\s]')
 
+f = open("knnOutput.txt",'a+')
+
 
 
 def decode_idx3_ubyte(idx3_ubyte_file):
@@ -155,7 +157,8 @@ def load_test_labels(idx_ubyte_file=test_labels_idx1_ubyte_file):
     """
     return decode_idx1_ubyte(idx_ubyte_file)
 
-def knn(testVec,trainData,trainLabel,k,f,trainNum,testNum):
+
+def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
     trainSize = trainData.shape[0]
     rankList = []
     print(trainSize)
@@ -171,16 +174,28 @@ def knn(testVec,trainData,trainLabel,k,f,trainNum,testNum):
         rankList.append((sum,i))
     rankList.sort(key = lambda x:x[0])
     cnt = []
-    if k <= 5 :
-        size = k
-    else :
-        size = 5
-    for i in range(size):
-        cnt.append(trainLabel[rankList[i][1]])
+    print('对于第%d幅图片:' % testVec)
+    for i in range(5):
         print('第%i相似的图像为:' % i,file = f)
         for j in range(trainData[rankList[i][1]].shape[0]):
             print(strdel.sub('',str(trainData[rankList[i][1]][j])),file = f)
-    return max(cnt,key = cnt.count)
+    print('\n')
+    pos = 0
+    for i in range(10,1000,10):
+        for j in range(10):
+            print(pos*10+j)
+            cnt.append(trainLabel[rankList[pos*10+j][1]])
+        label = max(cnt, key=cnt.count)
+        filename = 'k='+str(i)+'.txt'
+        outfile = open(filename,'a+')
+        print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel), file=outfile)
+        print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel))
+        if int(label) == int(rightLabel) :
+            res[pos][0] +=1
+        else :
+            res[pos][1] +=1
+        pos += 1
+        outfile.close()
 
 
 def run():
@@ -210,30 +225,19 @@ def run():
         plt.imshow(train_images[i], cmap='gray')
         plt.show()
     """
-    acuList = []
-    for i in range(1,100,5):
-        filename = 'output'+str(i)+'.txt'
-        f = open(filename,'wt')
-        print('k=%d' % i,file = f)
-        rightNum = 0
-        wrongNum = 0
-        for j in range(test_images.shape[0]):
-            print('开始处理第%d个图像:' % j)
-            label = knn(test_images[j], train_images, train_labels, i+1,f,trainNum,testNum[j])
-            print('第%i幅图像的标签为:%d  正确标签为%d' % (j, label, test_labels[j]))
-            print('第%i幅图像的标签为:%d  正确标签为%d' % (j, label, test_labels[j]),file = f)
-            if int(label) == int(test_labels[i]):
-                rightNum += 1
-            else :
-                wrongNum += 1
-        f.close()
-        print(rightNum,wrongNum,(100.0*rightNum/(rightNum+wrongNum)))
-        acuList.append((100.0*rightNum/(rightNum+wrongNum),i))
+    result=np.zeros([200, 3])
+    for j in range(test_images.shape[0]):
+        print('开始处理第%d个图像:' % j)
+        knn(j, train_images, train_labels,trainNum,testNum[j],test_labels[j],result)
     f = open ('result.txt','wt')
-    print(acuList,file = f)
+    for i in range(10,1000,10):
+        pos = int((i/10) -1)
+        print('当k=%d时,正确数量为%d,错误数量为%d,正确率为' % (i,result[pos][0],result[pos][1]),100.0*(result[pos][0])/(result[pos][0]+result[pos][1]),file = f)
+    print(result,file = f)
     f.close()
 
 
 
 if __name__ == '__main__':
     run()
+    f.close()
