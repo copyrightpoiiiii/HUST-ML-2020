@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="533b7b82-a944-4623-a845-5475acffeda7" name="Default Changelist" comment="" />
+    <list default="true" id="533b7b82-a944-4623-a845-5475acffeda7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1_knn/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1_knn/knn.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab1_knn/knn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="199" column="20" lean-forward="true" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
+            <state relative-caret-position="426">
+              <caret line="204" column="23" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="23" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -22,7 +26,22 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab1_knn/result.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab1_knn/output4.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17823" />
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -35,12 +54,12 @@
     <option name="width" value="720" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -53,16 +72,11 @@
               <item name="ml_lab" type="462c0819:PsiDirectoryNode" />
               <item name="lab1_knn" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ml_lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml_lab" type="462c0819:PsiDirectoryNode" />
-              <item name="lab1_knn" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -160,18 +174,27 @@
       <updated>1589969421220</updated>
       <workItem from="1589969424199" duration="256000" />
       <workItem from="1589980753569" duration="13183000" />
-      <workItem from="1590073444489" duration="3663000" />
+      <workItem from="1590073444489" duration="3835000" />
+      <workItem from="1590078611806" duration="1034000" />
     </task>
+    <task id="LOCAL-00001" summary="lab 1">
+      <created>1590077322112</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590077322112</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17102000" />
+    <option name="totallyTimeSpent" value="18308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18168813" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18383405" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -182,7 +205,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32894737" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.3014354" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32894737" />
@@ -197,6 +220,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lab 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab 1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ml_lab$knn.coverage" NAME="knn Coverage Results" MODIFIED="1590077090383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1_knn" />
@@ -223,13 +250,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab1_knn/output0.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2417" />
+        <state relative-caret-position="-2504" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1_knn/output4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17823" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1_knn/result.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/lab1_knn/knn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="199" column="20" lean-forward="true" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
+        <state relative-caret-position="426">
+          <caret line="204" column="23" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="23" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

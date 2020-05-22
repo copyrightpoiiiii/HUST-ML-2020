@@ -37,7 +37,7 @@ def decode_idx3_ubyte(idx3_ubyte_file):
     offset += struct.calcsize(fmt_header)
     fmt_image = '>' + str(image_size) + 'B'
     images = np.empty((num_images, num_rows, num_cols))
-    for i in range(100):#num_images):
+    for i in range(num_images):
         if (i + 1) % 10000 == 0:
             print('已解析 %d' % (i + 1) + '张')
         images[i] = np.array(struct.unpack_from(fmt_image, bin_data, offset)).reshape((num_rows, num_cols))
@@ -158,7 +158,7 @@ def load_test_labels(idx_ubyte_file=test_labels_idx1_ubyte_file):
 def knn(testVec,trainData,trainLabel,k,f):
     trainSize = trainData.shape[0]
     rankList = []
-    for i in range(100):#trainSize):
+    for i in range(trainSize):
         sum = 0
         for j in range(trainData[i].shape[0]):
             testR = int(strdel.sub('',str(testVec[j])),2)
@@ -167,7 +167,11 @@ def knn(testVec,trainData,trainLabel,k,f):
         rankList.append((sum,i))
     rankList.sort(key = lambda x:x[0])
     cnt = []
-    for i in range(k):
+    if k <= 5 :
+        size = k
+    else :
+        size = 5
+    for i in range(size):
         cnt.append(trainLabel[rankList[i][1]])
         print('第%i相似的图像为:' % i,file = f)
         for j in range(trainData[rankList[i][1]].shape[0]):
@@ -198,7 +202,7 @@ def run():
         print('k=%d' % i,file = f)
         rightNum = 0
         wrongNum = 0
-        for j in range(10):#test_images.shape[0]):
+        for j in range(test_images.shape[0]):
             print('开始处理第%d个图像:' % j)
             label = knn(test_images[j], train_images, train_labels, i+1,f)
             print('第%i幅图像的标签为:%d  正确标签为%d' % (j, label, test_labels[j]),file = f)
