@@ -15,7 +15,7 @@ test_labels_idx1_ubyte_file = 'data/t10k-labels.idx1-ubyte'
 
 strdel = re.compile(r'[\[\].\s]')
 
-f = open("knnOutput.txt",'a+')
+f = open("output/knnOutput.txt",'a+')
 
 
 
@@ -185,7 +185,7 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
         for j in range(10):
             cnt.append(trainLabel[rankList[pos*10+j][1]])
         label = max(cnt, key=cnt.count)
-        filename = 'k='+str(i)+'.txt'
+        filename = 'output/k='+str(i)+'.txt'
         outfile = open(filename,'a+')
         print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel), file=outfile)
         print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel))
@@ -228,7 +228,7 @@ def run():
     for j in range(test_images.shape[0]):
         print('开始处理第%d个图像:' % j)
         knn(j, train_images, train_labels,trainNum,testNum[j],test_labels[j],result)
-    f = open ('result.txt','wt')
+    f = open ('output/result.txt','wt')
     for i in range(10,500,10):
         pos = int((i/10) -1)
         print('当k=%d时,正确数量为%d,错误数量为%d,正确率为' % (i,result[pos][0],result[pos][1]),100.0*(result[pos][0])/(result[pos][0]+result[pos][1]),file = f)
