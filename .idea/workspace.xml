@@ -4,12 +4,6 @@
     <list default="true" id="533b7b82-a944-4623-a845-5475acffeda7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1_knn/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1_knn/knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1_knn/output0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1_knn/output1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1_knn/output2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1_knn/output3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1_knn/output4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1_knn/result.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab1_knn/knn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="230" column="39" selection-start-line="230" selection-start-column="39" selection-end-line="230" selection-end-column="39" />
+            <state relative-caret-position="241">
+              <caret line="230" column="32" lean-forward="true" selection-start-line="230" selection-start-column="32" selection-end-line="230" selection-end-column="32" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -84,7 +78,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -170,7 +164,7 @@
       <workItem from="1589980753569" duration="13183000" />
       <workItem from="1590073444489" duration="3835000" />
       <workItem from="1590078611806" duration="4259000" />
-      <workItem from="1590117034083" duration="2544000" />
+      <workItem from="1590117034083" duration="4604000" />
     </task>
     <task id="LOCAL-00001" summary="lab 1">
       <created>1590077322112</created>
@@ -221,28 +215,42 @@
       <option name="project" value="LOCAL" />
       <updated>1590115123908</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="lab 1 finish">
+      <created>1590119606770</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590119606771</updated>
+    </task>
+    <task id="LOCAL-00009" summary="lab 1 finish">
+      <created>1590123374970</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590123374970</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24077000" />
+    <option name="totallyTimeSpent" value="26137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18597998" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.38340485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.33014354" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.33014354" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.3014354" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32894737" />
@@ -340,8 +348,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab1_knn/knn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="230" column="39" selection-start-line="230" selection-start-column="39" selection-end-line="230" selection-end-column="39" />
+        <state relative-caret-position="241">
+          <caret line="230" column="32" lean-forward="true" selection-start-line="230" selection-start-column="32" selection-end-line="230" selection-end-column="32" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

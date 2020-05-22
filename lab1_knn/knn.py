@@ -181,7 +181,7 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
             print(strdel.sub('',str(trainData[rankList[i][1]][j])),file = f)
     print('\n')
     pos = 0
-    for i in range(10,1000,10):
+    for i in range(10,500,10):
         for j in range(10):
             cnt.append(trainLabel[rankList[pos*10+j][1]])
         label = max(cnt, key=cnt.count)
@@ -229,7 +229,7 @@ def run():
         print('开始处理第%d个图像:' % j)
         knn(j, train_images, train_labels,trainNum,testNum[j],test_labels[j],result)
     f = open ('result.txt','wt')
-    for i in range(10,1000,10):
+    for i in range(10,500,10):
         pos = int((i/10) -1)
         print('当k=%d时,正确数量为%d,错误数量为%d,正确率为' % (i,result[pos][0],result[pos][1]),100.0*(result[pos][0])/(result[pos][0]+result[pos][1]),file = f)
     print(result,file = f)
