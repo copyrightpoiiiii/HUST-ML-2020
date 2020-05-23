@@ -178,8 +178,19 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
         for j in range(trainData[rankList[i][1]].shape[0]):
             print(strdel.sub('',str(trainData[rankList[i][1]][j])),file = f)
     print('\n',file=f)
-    pos = 0
-    for i in range(10,500,10):
+    for i in range(10):
+        cnt.append(trainLabel[rankList[i][1]])
+        label = max(cnt, key=cnt.count)
+        filename = 'output/k=' + str(i+1) + '.txt'
+        outfile = open(filename, 'a+')
+        print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel), file=outfile)
+        if int(label) == int(rightLabel) :
+            res[i][0] +=1
+        else :
+            res[i][1] +=1
+        outfile.close()
+    pos = 1
+    for i in range(20,500,10):
         for j in range(10):
             cnt.append(trainLabel[rankList[pos*10+j][1]])
         label = max(cnt, key=cnt.count)
@@ -188,9 +199,9 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
         print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel), file=outfile)
         #print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel))
         if int(label) == int(rightLabel) :
-            res[pos][0] +=1
+            res[pos+9][0] +=1
         else :
-            res[pos][1] +=1
+            res[pos+9][1] +=1
         pos += 1
         outfile.close()
 
@@ -223,12 +234,15 @@ def run():
         plt.show()
     """
     result=np.zeros([200, 3])
-    for j in range(4974,test_images.shape[0]):
+    for j in range(test_images.shape[0]):
         print('开始处理第%d个图像:' % j)
         knn(j, train_images, train_labels,trainNum,testNum[j],test_labels[j],result)
     f = open ('output/result.txt','wt')
-    for i in range(10,500,10):
-        pos = int((i/10) -1)
+    for i in range(10):
+        print('当k=%d时,正确数量为%d,错误数量为%d,正确率为' % (i+1, result[i][0], result[i][1]),
+              100.0 * (result[i][0]) / (result[i][0] + result[i][1]), file=f)
+    for i in range(20,500,10):
+        pos = int((i/10) +8)
         print('当k=%d时,正确数量为%d,错误数量为%d,正确率为' % (i,result[pos][0],result[pos][1]),100.0*(result[pos][0])/(result[pos][0]+result[pos][1]),file = f)
     print(result,file = f)
     f.close()
