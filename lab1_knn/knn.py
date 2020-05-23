@@ -15,8 +15,6 @@ test_labels_idx1_ubyte_file = 'data/t10k-labels.idx1-ubyte'
 
 strdel = re.compile(r'[\[\].\s]')
 
-f = open("output/knnOutput.txt",'a+')
-
 
 
 def decode_idx3_ubyte(idx3_ubyte_file):
@@ -172,36 +170,21 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
         rankList.append((sum,i))
     rankList.sort(key = lambda x:x[0])
     cnt = []
-    print('对于第%d幅图片:' % testVec,file = f)
     for i in range(5):
-        print('第%i相似的图像为:' % i,file = f)
-        for j in range(trainData[rankList[i][1]].shape[0]):
-            print(strdel.sub('',str(trainData[rankList[i][1]][j])),file = f)
-    print('\n',file=f)
-    for i in range(10):
         cnt.append(trainLabel[rankList[i][1]])
-        label = max(cnt, key=cnt.count)
-        filename = 'output/k=' + str(i+1) + '.txt'
-        outfile = open(filename, 'a+')
-        print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel), file=outfile)
-        if int(label) == int(rightLabel) :
-            res[i][0] +=1
-        else :
-            res[i][1] +=1
-        outfile.close()
-    pos = 1
-    for i in range(20,500,10):
-        for j in range(10):
-            cnt.append(trainLabel[rankList[pos*10+j][1]])
+    pos = 0
+    for i in range(15,500,10):
+        for j in range(i-10,i):
+            cnt.append(trainLabel[rankList[j][1]])
         label = max(cnt, key=cnt.count)
         filename = 'output/k='+str(i)+'.txt'
         outfile = open(filename,'a+')
         print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel), file=outfile)
         #print('第%i幅图像的标签为:%d  正确标签为%d' % (testVec, label, rightLabel))
         if int(label) == int(rightLabel) :
-            res[pos+9][0] +=1
+            res[pos][0] +=1
         else :
-            res[pos+9][1] +=1
+            res[pos][1] +=1
         pos += 1
         outfile.close()
 
@@ -237,14 +220,11 @@ def run():
     for j in range(test_images.shape[0]):
         print('开始处理第%d个图像:' % j)
         knn(j, train_images, train_labels,trainNum,testNum[j],test_labels[j],result)
-    f = open ('output/result.txt','wt')
-    for i in range(10):
-        print('当k=%d时,正确数量为%d,错误数量为%d,正确率为' % (i+1, result[i][0], result[i][1]),
-              100.0 * (result[i][0]) / (result[i][0] + result[i][1]), file=f)
-    for i in range(20,500,10):
-        pos = int((i/10) +8)
+    f = open ('output/result.txt','a+')
+    pos = 0
+    for i in range(15,500,10):
         print('当k=%d时,正确数量为%d,错误数量为%d,正确率为' % (i,result[pos][0],result[pos][1]),100.0*(result[pos][0])/(result[pos][0]+result[pos][1]),file = f)
-    print(result,file = f)
+        pos+=1
     f.close()
 
 
