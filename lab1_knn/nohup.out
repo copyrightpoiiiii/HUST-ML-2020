@@ -10017,3 +10017,7 @@
 开始处理第9997个图像:
 开始处理第9998个图像:
 开始处理第9999个图像:
+Traceback (most recent call last):
+  File "knn.py", line 234, in <module>
+    f.close()
+NameError: name 'f' is not defined
