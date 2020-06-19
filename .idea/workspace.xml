@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="533b7b82-a944-4623-a845-5475acffeda7" name="Default Changelist" comment="">
+    <list default="true" id="533b7b82-a944-4623-a845-5475acffeda7" name="Default Changelist" comment="lab 1 finish">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/adagrad.py" beforeDir="false" afterPath="$PROJECT_DIR$/final/adagrad.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final/adagrad.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+            <state relative-caret-position="316">
+              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -240,6 +241,7 @@
       <workItem from="1590322881086" duration="5375000" />
       <workItem from="1592528306500" duration="5456000" />
       <workItem from="1592533937265" duration="30000" />
+      <workItem from="1592533997787" duration="1414000" />
     </task>
     <task id="LOCAL-00001" summary="lab 1">
       <created>1590077322112</created>
@@ -353,17 +355,31 @@
       <option name="project" value="LOCAL" />
       <updated>1592533873312</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="lab 1 finish">
+      <created>1592534007795</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1592534007795</updated>
+    </task>
+    <task id="LOCAL-00018" summary="lab 1 finish">
+      <created>1592535560168</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1592535560168</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39766000" />
+    <option name="totallyTimeSpent" value="41180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13733906" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13876967" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -378,7 +394,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.3014354" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32894737" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.32894737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -510,13 +526,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab1_knn/output/knnOutput.txt">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-3128" />
+      </provider>
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="15">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-3128" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab1_knn/output/result.txt">
@@ -535,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/final/adagrad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        <state relative-caret-position="316">
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

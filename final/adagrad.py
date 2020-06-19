@@ -43,7 +43,7 @@ df = pd.read_csv('incomeN.csv')
 for i in range(1,df.shape[1]):
     x = max(df[str(i)])
     y = min(df[str(i)])
-    for j in range(0,3):
+    for j in range(0,df.shape[0]-1):
         tmp = df.loc[j,str(i)]
         df.loc[j,str(i)]=(tmp - y)/(x - y)
 df.to_csv("incomePre.csv",index=False)
