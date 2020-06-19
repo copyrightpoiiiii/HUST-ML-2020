@@ -37,7 +37,7 @@ def decode_idx3_ubyte(idx3_ubyte_file):
     offset += struct.calcsize(fmt_header)
     fmt_image = '>' + str(image_size) + 'B'
     images = np.empty((num_images, num_rows, num_cols))
-    for i in range(num_images):
+    for i in range(5000):#num_images):
         if (i + 1) % 10000 == 0:
             print('已解析 %d' % (i + 1) + '张')
         images[i] = np.array(struct.unpack_from(fmt_image, bin_data, offset)).reshape((num_rows, num_cols))
@@ -156,10 +156,10 @@ def load_test_labels(idx_ubyte_file=test_labels_idx1_ubyte_file):
     return decode_idx1_ubyte(idx_ubyte_file)
 
 
-def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
+def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel):
     trainSize = trainData.shape[0]
     rankList = []
-    for i in range(trainSize):
+    for i in range(5000):#trainSize):
         #if (i + 1) % 10000 == 0:
         #    print('已解析 %d' % (i + 1) + '张')
         sum = 0
@@ -171,8 +171,11 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
     rankList.sort(key = lambda x:x[0])
     cnt = []
     for i in range(5):
-        cnt.append(trainLabel[rankList[i][1]])
+        #cnt.append(trainLabel[rankList[i][1]])
+        plt.imshow(trainData[rankList[i][1]], cmap='gray')
+        plt.show()
     pos = 0
+    """
     for i in range(15,500,10):
         for j in range(i-10,i):
             cnt.append(trainLabel[rankList[j][1]])
@@ -187,6 +190,7 @@ def knn(testVec,trainData,trainLabel,trainNum,testNum,rightLabel,res):
             res[pos][1] +=1
         pos += 1
         outfile.close()
+    """
 
 
 def run():
@@ -197,14 +201,15 @@ def run():
 
     trainNum = np.empty((train_images.shape[0], train_images[0].shape[0], 1))
     testNum = np.empty((test_images.shape[0], test_images[0].shape[0], 1))
-    for i in range(train_images.shape[0]) :
+    for i in range(5000):#train_images.shape[0]) :
         for j in range(train_images[i].shape[0]) :
             trainNum[i][j] = int(strdel.sub('',str(train_images[i][j])),2)
 
-    for i in range(test_images.shape[0]) :
+    for i in range(1) :
         for j in range(test_images[i].shape[0]) :
             testNum[i][j] = int(strdel.sub('',str(test_images[i][j])),2)
 
+    knn(0, train_images, train_labels, trainNum, testNum[0], test_labels[0])
 
     print('开始运行')
 
@@ -215,7 +220,7 @@ def run():
         print(test_images[i].shape[0:2])
         plt.imshow(train_images[i], cmap='gray')
         plt.show()
-    """
+   
     result=np.zeros([200, 3])
     for j in range(test_images.shape[0]):
         print('开始处理第%d个图像:' % j)
@@ -226,9 +231,8 @@ def run():
         print('当k=%d时,正确数量为%d,错误数量为%d,正确率为' % (i,result[pos][0],result[pos][1]),100.0*(result[pos][0])/(result[pos][0]+result[pos][1]),file = f)
         pos+=1
     f.close()
-
-
+     """
 
 if __name__ == '__main__':
     run()
-    f.close()
+    #f.close()
