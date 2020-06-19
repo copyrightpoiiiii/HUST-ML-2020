@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="533b7b82-a944-4623-a845-5475acffeda7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/final/adagrad.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final/income.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final/机器学习结题项目.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab1_knn/print.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1_knn/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1_knn/knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1_knn/output/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab1_knn/output/result.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final/adagrad.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="271">
+              <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -71,6 +65,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -82,7 +77,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -146,6 +140,9 @@
       <module name="ml_lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/final" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -241,7 +238,8 @@
       <workItem from="1590234776178" duration="46000" />
       <workItem from="1590309962487" duration="113000" />
       <workItem from="1590322881086" duration="5375000" />
-      <workItem from="1592528306500" duration="5412000" />
+      <workItem from="1592528306500" duration="5456000" />
+      <workItem from="1592533937265" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="lab 1">
       <created>1590077322112</created>
@@ -348,16 +346,24 @@
       <option name="project" value="LOCAL" />
       <updated>1590234671342</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="lab 1 finish">
+      <created>1592533873312</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1592533873312</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39692000" />
+    <option name="totallyTimeSpent" value="39766000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13590844" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13733906" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -529,8 +535,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/final/adagrad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="271">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
