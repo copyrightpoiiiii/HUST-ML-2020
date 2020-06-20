@@ -71,6 +71,7 @@ def train(trainData,trainLabel,devData,devLabel,rate,max_iter,batch_size,num_tra
             break
     return w,b,times,loss_train,loss_validation,train_acc,test_acc
 
+"""
 df = pd.read_csv('incomeN.csv')
 for i in range(1,df.shape[1]): #初始化 参数归一化
     x = df[str(i)].mean( axis = 0)
@@ -88,20 +89,17 @@ for i in range(1,df.shape[1]): #初始化 参数归一化
         tmp = df.loc[j,str(i)]
         df.loc[j,str(i)]=(tmp - y)/(x - y)
 df.to_csv("incomePre.csv",index=False)
-
-
 """
+
+
 df = pd.read_csv('incomePre.csv')
 #切分数据集
 trainData = df.iloc[0:3000,0:57]
 devData = df.iloc[3000:4000,0:57]
 trainLabel = df.iloc[0:3000,57]
 devLabel = df.iloc[3000:4000,57]
-"""
 
 
-
-"""
 max_iter = 100000 #迭代次数
 num_train = 3000
 num_dev =1000
@@ -109,7 +107,32 @@ batch_size = 128
 rateChoose = [0.001, 0.005, 0.01, 0.05, 0.1, 0.2, 0.4, 0.5, 1.0]
 for rate in rateChoose:
     print('rate =',rate)
-    filename = 'output/result' + '_' + str(rate) + '.txt'
+    filename = 'output/result' + '_' + str(rate) + '_01.txt'
+    print(filename)
+    f = open(filename, 'w')
+    print('01 rate =', rate,file = f)
+    w,b,times,loss_train,loss_val,train_acc,test_acc = train(trainData.values,trainLabel.values,devData.values,devLabel.values,rate,max_iter,batch_size,num_train,num_dev)
+    print(w,b,times,file=f)
+    print(loss_train,loss_val,file=f)
+    print(train_acc,test_acc,file=f)
+    f.close()
+
+df = pd.read_csv('incomePreMean.csv')
+#切分数据集
+trainData = df.iloc[0:3000,0:57]
+devData = df.iloc[3000:4000,0:57]
+trainLabel = df.iloc[0:3000,57]
+devLabel = df.iloc[3000:4000,57]
+
+
+max_iter = 100000 #迭代次数
+num_train = 3000
+num_dev =1000
+batch_size = 128
+rateChoose = [0.001, 0.005, 0.01, 0.05, 0.1, 0.2, 0.4, 0.5, 1.0]
+for rate in rateChoose:
+    print('Mean rate =',rate)
+    filename = 'output/result' + '_' + str(rate) + '_Mean.txt'
     print(filename)
     f = open(filename, 'w')
     print('rate =', rate,file = f)
@@ -118,7 +141,7 @@ for rate in rateChoose:
     print(loss_train,loss_val,file=f)
     print(train_acc,test_acc,file=f)
     f.close()
-"""
+
 
 
 
