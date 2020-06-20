@@ -26,7 +26,7 @@ def accuracy(yPred,yLabel):
     return np.sum(yPred == yLabel)/len(yPred)
 
 
-def train(trainData,trainLabel,devData,devLabel,rate,max_iter,batch_size,num_train):
+def train(trainData,trainLabel,devData,devLabel,rate,max_iter,batch_size,num_train,num_dev):
     w = np.zeros(trainData.shape[1])
     b = np.zeros(1,)
     loss_train = []  # 训练集损失
@@ -75,7 +75,7 @@ df = pd.read_csv('incomeN.csv')
 for i in range(1,df.shape[1]): #初始化 参数归一化
     x = df[str(i)].mean( axis = 0)
     y = df[str(i)].std()
-    for j in range(0,df.shape[0]-1):
+    for j in range(0,df.shape[0]):
         tmp = df.loc[j,str(i)]
         df.loc[j,str(i)]=(tmp - x)/y
 df.to_csv("incomePreMean.csv",index=False)
@@ -84,10 +84,11 @@ df = pd.read_csv('incomeN.csv')
 for i in range(1,df.shape[1]): #初始化 参数归一化
     x = max(df[str(i)])
     y = min(df[str(i)])
-    for j in range(0,df.shape[0]-1):
+    for j in range(0,df.shape[0]):
         tmp = df.loc[j,str(i)]
         df.loc[j,str(i)]=(tmp - y)/(x - y)
 df.to_csv("incomePre.csv",index=False)
+
 
 """
 df = pd.read_csv('incomePre.csv')
@@ -112,7 +113,7 @@ for rate in rateChoose:
     print(filename)
     f = open(filename, 'w')
     print('rate =', rate,file = f)
-    w,b,times,loss_train,loss_val,train_acc,test_acc = train(trainData.values,trainLabel.values,devData.values,devLabel.values,rate,max_iter,batch_size,num_train)
+    w,b,times,loss_train,loss_val,train_acc,test_acc = train(trainData.values,trainLabel.values,devData.values,devLabel.values,rate,max_iter,batch_size,num_train,num_dev)
     print(w,b,times,file=f)
     print(loss_train,loss_val,file=f)
     print(train_acc,test_acc,file=f)
