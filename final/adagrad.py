@@ -93,7 +93,7 @@ for i in range(1,df.shape[1]): #初始化 参数归一化
 df.to_csv("incomePre.csv",index=False)
 """
 
-
+"""
 df = pd.read_csv('incomePre.csv')
 #切分数据集
 trainData = df.iloc[0:3000,0:57]
@@ -117,7 +117,7 @@ for rate in rateChoose:
     print(loss_train,loss_val,file=f)
     print(train_acc,test_acc,file=f)
     f.close()
-
+"""
 df = pd.read_csv('incomePreMean.csv')
 #切分数据集
 trainData = df.iloc[0:3000,0:57]
@@ -130,7 +130,7 @@ max_iter = 100000 #迭代次数
 num_train = 3000
 num_dev =1000
 batch_size = 128
-rateChoose = [0.001, 0.005, 0.01, 0.05, 0.1, 0.2, 0.4, 0.5, 1.0]
+rateChoose = [0.1, 0.2, 0.4, 0.5, 1.0]
 for rate in rateChoose:
     print('Mean rate =',rate)
     filename = 'output/result' + '_' + str(rate) + '_Mean.txt'
