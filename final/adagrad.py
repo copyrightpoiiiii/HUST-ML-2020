@@ -40,6 +40,8 @@ def train(trainData,trainLabel,devData,devLabel,rate,max_iter,batch_size,num_tra
     wGrad = []
     bGrad = []
     for i in range(1,max_iter+1):
+        if i%1000 == 0:
+            print('run ',i)
         x,y=shuffle(trainData,trainLabel)
         for j in range(int(np.floor(num_train/batch_size))):
             xS = x[j*batch_size:(j+1)*batch_size]
@@ -108,7 +110,6 @@ rateChoose = [0.001, 0.005, 0.01, 0.05, 0.1, 0.2, 0.4, 0.5, 1.0]
 for rate in rateChoose:
     print('rate =',rate)
     filename = 'output/result' + '_' + str(rate) + '_01.txt'
-    print(filename)
     f = open(filename, 'w')
     print('01 rate =', rate,file = f)
     w,b,times,loss_train,loss_val,train_acc,test_acc = train(trainData.values,trainLabel.values,devData.values,devLabel.values,rate,max_iter,batch_size,num_train,num_dev)
@@ -133,7 +134,6 @@ rateChoose = [0.001, 0.005, 0.01, 0.05, 0.1, 0.2, 0.4, 0.5, 1.0]
 for rate in rateChoose:
     print('Mean rate =',rate)
     filename = 'output/result' + '_' + str(rate) + '_Mean.txt'
-    print(filename)
     f = open(filename, 'w')
     print('rate =', rate,file = f)
     w,b,times,loss_train,loss_val,train_acc,test_acc = train(trainData.values,trainLabel.values,devData.values,devLabel.values,rate,max_iter,batch_size,num_train,num_dev)

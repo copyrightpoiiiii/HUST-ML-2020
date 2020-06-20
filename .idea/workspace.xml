@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final/adagrad.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="133" column="16" selection-start-line="133" selection-start-column="16" selection-end-line="133" selection-end-column="16" />
+            <state relative-caret-position="617">
+              <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -78,12 +78,6 @@
               <item name="ml_lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml_lab" type="462c0819:PsiDirectoryNode" />
               <item name="final" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml_lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml_lab" type="462c0819:PsiDirectoryNode" />
-              <item name="final" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ml_lab" type="b2602c69:ProjectViewProjectNode" />
@@ -157,6 +151,9 @@
       <module name="ml_lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/final" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -220,6 +217,9 @@
       <module name="ml_lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/final" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -275,7 +275,8 @@
       <workItem from="1592528306500" duration="5456000" />
       <workItem from="1592533937265" duration="30000" />
       <workItem from="1592533997787" duration="1851000" />
-      <workItem from="1592536912264" duration="15978000" />
+      <workItem from="1592536912264" duration="16298000" />
+      <workItem from="1592620752267" duration="151000" />
     </task>
     <task id="LOCAL-00001" summary="lab 1">
       <created>1590077322112</created>
@@ -424,11 +425,32 @@
       <option name="project" value="LOCAL" />
       <updated>1592619924043</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="ready to train">
+      <created>1592620357269</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1592620357269</updated>
+    </task>
+    <task id="LOCAL-00023" summary="ready to train">
+      <created>1592620477584</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1592620477584</updated>
+    </task>
+    <task id="LOCAL-00024" summary="ready to train">
+      <created>1592620490698</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1592620490698</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57595000" />
+    <option name="totallyTimeSpent" value="58066000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -440,10 +462,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1695279" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17167382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -537,7 +559,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lab 1" />
     <MESSAGE value="lab 1 finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab 1 finish" />
+    <MESSAGE value="ready to train" />
+    <option name="LAST_COMMIT_MESSAGE" value="ready to train" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ml_lab$knn.coverage" NAME="knn Coverage Results" MODIFIED="1590368471975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1_knn" />
@@ -603,16 +626,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final/test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/final/test" />
     <entry file="file://$PROJECT_DIR$/lab1_knn/knn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1009">
@@ -623,16 +637,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final/output/result.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/final/output/result_0.1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/final/output/result.txt" />
+    <entry file="file://$PROJECT_DIR$/final/output/result_0.1.txt" />
     <entry file="file://$PROJECT_DIR$/final/adagrad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="133" column="16" selection-start-line="133" selection-start-column="16" selection-end-line="133" selection-end-column="16" />
+        <state relative-caret-position="617">
+          <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
