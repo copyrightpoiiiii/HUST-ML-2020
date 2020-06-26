@@ -73,7 +73,7 @@ def train(trainData,trainLabel,devData,devLabel,rate,max_iter,batch_size,num_tra
             break
     return w,b,times,loss_train,loss_validation,train_acc,test_acc
 
-"""
+
 df = pd.read_csv('incomeN.csv')
 for i in range(1,df.shape[1]): #初始化 参数归一化
     x = df[str(i)].mean( axis = 0)
@@ -91,9 +91,9 @@ for i in range(1,df.shape[1]): #初始化 参数归一化
         tmp = df.loc[j,str(i)]
         df.loc[j,str(i)]=(tmp - y)/(x - y)
 df.to_csv("incomePre.csv",index=False)
-"""
 
-"""
+
+
 df = pd.read_csv('incomePre.csv')
 #切分数据集
 trainData = df.iloc[0:3000,0:57]
@@ -117,7 +117,7 @@ for rate in rateChoose:
     print(loss_train,loss_val,file=f)
     print(train_acc,test_acc,file=f)
     f.close()
-"""
+
 df = pd.read_csv('incomePreMean.csv')
 #切分数据集
 trainData = df.iloc[0:3000,0:57]

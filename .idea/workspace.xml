@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="533b7b82-a944-4623-a845-5475acffeda7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/final/dataWork.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/meanLossfun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/minmaxLossfun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/misclassification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/output/01-1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/output/01-2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/output/mean-01.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/output/mean-2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/~$学习结题项目.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/adagrad.py" beforeDir="false" afterPath="$PROJECT_DIR$/final/adagrad.py" afterDir="false" />
     </list>
@@ -26,10 +35,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
-  </component>
   <component name="ProjectId" id="1dZAgXLDiXHsOpYIl0sCC5pAD3p" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -39,6 +44,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -60,7 +66,7 @@
       <recent name="$PROJECT_DIR$/lab1_knn/data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.adagrad">
+  <component name="RunManager" selected="Python.dataWork">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ml_lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,6 +103,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/final/adagrad.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dataWork" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml_lab" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/final" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/final/dataWork.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,6 +201,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dataWork" />
         <item itemvalue="Python.adagrad" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.print" />
@@ -214,7 +243,9 @@
       <workItem from="1592536912264" duration="16298000" />
       <workItem from="1592620752267" duration="1032000" />
       <workItem from="1592622363427" duration="293000" />
-      <workItem from="1592637264403" duration="363000" />
+      <workItem from="1592637264403" duration="392000" />
+      <workItem from="1592641216306" duration="700000" />
+      <workItem from="1593066525501" duration="9148000" />
     </task>
     <task id="LOCAL-00001" summary="lab 1">
       <created>1590077322112</created>
@@ -391,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592620922486</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="start run">
+      <created>1592637746442</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1592637746442</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -433,6 +471,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="lab 1" />
     <MESSAGE value="lab 1 finish" />
     <MESSAGE value="ready to train" />
@@ -440,12 +479,61 @@
     <option name="LAST_COMMIT_MESSAGE" value="start run" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="377" y="245" key="git4idea.merge.GitPullDialog" timestamp="1592637451697">
+    <state x="419" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593102110434">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="377" y="245" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1592637451697" />
+    <state x="419" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1593102110434" />
+    <state x="297" y="25" key="CommitChangelistDialog2" timestamp="1592637744943">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="297" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1592637744943" />
+    <state width="1398" height="306" key="GridCell.Tab.0.bottom" timestamp="1593103282475">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="306" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593103282475" />
+    <state width="1398" height="306" key="GridCell.Tab.0.center" timestamp="1593103282475">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="306" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593103282475" />
+    <state width="1398" height="306" key="GridCell.Tab.0.left" timestamp="1593103282474">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="306" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593103282474" />
+    <state width="1398" height="306" key="GridCell.Tab.0.right" timestamp="1593103282475">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="306" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593103282475" />
+    <state width="1398" height="306" key="GridCell.Tab.1.bottom" timestamp="1593103282477">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="306" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593103282477" />
+    <state width="1398" height="306" key="GridCell.Tab.1.center" timestamp="1593103282476">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="306" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1593103282476" />
+    <state width="1398" height="306" key="GridCell.Tab.1.left" timestamp="1593103282476">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="306" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1593103282476" />
+    <state width="1398" height="306" key="GridCell.Tab.1.right" timestamp="1593103282476">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="306" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1593103282476" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1592637752285">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1592637752285" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1593099514294">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1593099514294" />
+    <state x="377" y="245" key="git4idea.merge.GitPullDialog" timestamp="1592641224909">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="377" y="245" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1592641224909" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ml_lab$knn.coverage" NAME="knn Coverage Results" MODIFIED="1590368471975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1_knn" />
+    <SUITE FILE_PATH="coverage/ml_lab$dataWork.coverage" NAME="dataWork Coverage Results" MODIFIED="1593101607169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final" />
   </component>
 </project>
